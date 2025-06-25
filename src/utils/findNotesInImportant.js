@@ -1,0 +1,1 @@
+export const findNotesInImportant = (important, id) => important.some(note => note.id === id);

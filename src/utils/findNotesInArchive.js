@@ -1,0 +1,1 @@
+export const findNotesInArchive = (archive, id) => archive.some(note => note.id === id);

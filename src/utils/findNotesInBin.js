@@ -1,0 +1,1 @@
+export const findNotesInBin = (bin, id) => bin.some(note => note.id === id);
