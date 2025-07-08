@@ -1,9 +1,10 @@
 name: Deploy Vite React App to GitHub Pages
 
+# ✅ THIS is the part you were missing:
 on:
   push:
     branches:
-      - master  # or master, if that's your default branch
+      - master  # Change to 'main' if your default branch is 'main'
 
 jobs:
   build:
@@ -13,7 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
@@ -21,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build project
+      - name: Build the project
         run: npm run build
 
       - name: Deploy to GitHub Pages
